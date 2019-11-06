@@ -1,15 +1,17 @@
 package eu.bausov.kafkaavro;
 
 import eu.bausov.kafkaavro.avsc.Weather;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
 /**
  * Created by GreenNun on 06.11.2019.
  */
-public class TestAvscToPojo {
+class AvscToPojoTest {
 
-    public static void main(String[] args) {
+    @Test
+    void test() {
         final var weather = new Weather();
         System.out.println(weather);
 
