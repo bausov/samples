@@ -14,12 +14,11 @@ import org.apache.avro.util.Utf8;
 /** A weather reading. */
 @org.apache.avro.specific.AvroGenerated
 public class Weather extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-    public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Weather\",\"namespace\":\"eu.bausov.kafkaavro.avsc\",\"doc\":\"A weather reading.\",\"fields\":[{\"name\":\"station\",\"type\":\"string\",\"order\":\"ignore\"},{\"name\":\"time\",\"type\":\"long\"},{\"name\":\"temp\",\"type\":\"int\"},{\"name\":\"price\",\"type\":{\"type\":\"string\",\"java-class\":\"java.math.BigDecimal\"}}]}");
-    private static final long serialVersionUID = -7187535112414668570L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Weather\",\"namespace\":\"eu.bausov.kafkaavro.avsc\",\"doc\":\"A weather reading.\",\"fields\":[{\"name\":\"station\",\"type\":\"string\",\"order\":\"ignore\"},{\"name\":\"time\",\"type\":\"long\"},{\"name\":\"temp\",\"type\":\"int\"},{\"name\":\"price\",\"type\":{\"type\":\"string\",\"java-class\":\"java.math.BigDecimal\"}}]}");
+  private static final long serialVersionUID = -7187535112414668570L;
+  private static SpecificData MODEL$ = new SpecificData();
   private static final BinaryMessageEncoder<Weather> ENCODER =
           new BinaryMessageEncoder<Weather>(MODEL$, SCHEMA$);
-
-    private static SpecificData MODEL$ = new SpecificData();
   private static final BinaryMessageDecoder<Weather> DECODER =
           new BinaryMessageDecoder<Weather>(MODEL$, SCHEMA$);
   @SuppressWarnings("unchecked")
@@ -29,70 +28,77 @@ public class Weather extends org.apache.avro.specific.SpecificRecordBase impleme
   private static final org.apache.avro.io.DatumReader<Weather>
           READER$ = (org.apache.avro.io.DatumReader<Weather>) MODEL$.createDatumReader(SCHEMA$);
 
-    /**
-     * Return the BinaryMessageEncoder instance used by this class.
-     *
-     * @return the message encoder used by this class
-     */
-    public static BinaryMessageEncoder<Weather> getEncoder() {
-        return ENCODER;
-    }
-
-    /**
-     * Return the BinaryMessageDecoder instance used by this class.
-     *
-     * @return the message decoder used by this class
-     */
-    public static BinaryMessageDecoder<Weather> getDecoder() {
-        return DECODER;
-    }
-
-    /**
-     * Create a new BinaryMessageDecoder instance for this class that uses the specified {@link SchemaStore}.
-     *
-     * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
-     * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
-     */
-    public static BinaryMessageDecoder<Weather> createDecoder(SchemaStore resolver) {
-        return new BinaryMessageDecoder<Weather>(MODEL$, SCHEMA$, resolver);
-    }
-
-    static {
+  static {
     MODEL$.addLogicalTypeConversion(new org.apache.avro.Conversions.DecimalConversion());
-    }
+  }
 
-    @Deprecated
-    public java.lang.CharSequence station;
-    @Deprecated
-    public long time;
-    @Deprecated
-    public int temp;
-    @Deprecated public java.math.BigDecimal price;
-  /**
-   * Default constructor.  Note that this does not initialize fields
-   * to their default values from the schema.  If that is desired then
-   * one should use <code>newBuilder()</code>.
-   */
-  public Weather() {}
+  @Deprecated
+  public java.lang.CharSequence station;
+  @Deprecated
+  public long time;
+  @Deprecated
+  public int temp;
+  @Deprecated
+  public java.math.BigDecimal price;
 
   /**
    * All-args constructor.
+   *
    * @param station The new value for station
-   * @param time The new value for time
-   * @param temp The new value for temp
-   * @param price The new value for price
+   * @param time    The new value for time
+   * @param temp    The new value for temp
+   * @param price   The new value for price
    */
   public Weather(java.lang.CharSequence station, java.lang.Long time, java.lang.Integer temp, java.math.BigDecimal price) {
     this.station = station;
     this.time = time;
     this.temp = temp;
-      this.price = price;
+    this.price = price;
   }
 
-    public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
+  public static org.apache.avro.Schema getClassSchema() {
+    return SCHEMA$;
+  }
+
+  /**
+   * Return the BinaryMessageEncoder instance used by this class.
+   *
+   * @return the message encoder used by this class
+   */
+  public static BinaryMessageEncoder<Weather> getEncoder() {
+    return ENCODER;
+  }
+
+  /**
+   * Return the BinaryMessageDecoder instance used by this class.
+   *
+   * @return the message decoder used by this class
+   */
+  public static BinaryMessageDecoder<Weather> getDecoder() {
+    return DECODER;
+  }
+
+  /**
+   * Default constructor.  Note that this does not initialize fields
+   * to their default values from the schema.  If that is desired then
+   * one should use <code>newBuilder()</code>.
+   */
+  public Weather() {
+  }
+
+  /**
+   * Create a new BinaryMessageDecoder instance for this class that uses the specified {@link SchemaStore}.
+   *
+   * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
+   * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
+   */
+  public static BinaryMessageDecoder<Weather> createDecoder(SchemaStore resolver) {
+    return new BinaryMessageDecoder<Weather>(MODEL$, SCHEMA$, resolver);
+  }
 
   /**
    * Deserializes a Weather from a ByteBuffer.
+   *
    * @param b a byte buffer holding serialized data for an instance of this class
    * @return a Weather instance decoded from the given buffer
    * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
@@ -104,10 +110,11 @@ public class Weather extends org.apache.avro.specific.SpecificRecordBase impleme
 
   /**
    * Creates a new Weather RecordBuilder.
+   *
    * @return A new Weather RecordBuilder
    */
   public static eu.bausov.kafkaavro.avsc.Weather.Builder newBuilder() {
-      return new eu.bausov.kafkaavro.avsc.Weather.Builder();
+    return new eu.bausov.kafkaavro.avsc.Weather.Builder();
   }
 
   /**
@@ -116,10 +123,10 @@ public class Weather extends org.apache.avro.specific.SpecificRecordBase impleme
    * @return A new Weather RecordBuilder
    */
   public static eu.bausov.kafkaavro.avsc.Weather.Builder newBuilder(eu.bausov.kafkaavro.avsc.Weather.Builder other) {
-      if (other == null) {
-          return new eu.bausov.kafkaavro.avsc.Weather.Builder();
-      } else {
-          return new eu.bausov.kafkaavro.avsc.Weather.Builder(other);
+    if (other == null) {
+      return new eu.bausov.kafkaavro.avsc.Weather.Builder();
+    } else {
+      return new eu.bausov.kafkaavro.avsc.Weather.Builder(other);
     }
   }
 
@@ -129,10 +136,10 @@ public class Weather extends org.apache.avro.specific.SpecificRecordBase impleme
    * @return A new Weather RecordBuilder
    */
   public static eu.bausov.kafkaavro.avsc.Weather.Builder newBuilder(eu.bausov.kafkaavro.avsc.Weather other) {
-      if (other == null) {
-          return new eu.bausov.kafkaavro.avsc.Weather.Builder();
-      } else {
-          return new eu.bausov.kafkaavro.avsc.Weather.Builder(other);
+    if (other == null) {
+      return new eu.bausov.kafkaavro.avsc.Weather.Builder();
+    } else {
+      return new eu.bausov.kafkaavro.avsc.Weather.Builder(other);
     }
   }
 
@@ -195,108 +202,99 @@ public class Weather extends org.apache.avro.specific.SpecificRecordBase impleme
     return price;
   }
 
+  /**
+   * Serializes this Weather to a ByteBuffer.
+   *
+   * @return a buffer holding the serialized data for this instance
+   * @throws java.io.IOException if this instance could not be serialized
+   */
+  public java.nio.ByteBuffer toByteBuffer() throws java.io.IOException {
+    return ENCODER.encode(this);
+  }
+
+  public org.apache.avro.specific.SpecificData getSpecificData() {
+    return MODEL$;
+  }
+
+  public org.apache.avro.Schema getSchema() {
+    return SCHEMA$;
+  }
+
+  // Used by DatumWriter.  Applications should not call.
+  public java.lang.Object get(int field$) {
+    switch (field$) {
+      case 0:
+        return station;
+      case 1:
+        return time;
+      case 2:
+        return temp;
+      case 3:
+        return price;
+      default:
+        throw new org.apache.avro.AvroRuntimeException("Bad index");
+    }
+  }
+
+  // Used by DatumReader.  Applications should not call.
+  @SuppressWarnings(value = "unchecked")
+  public void put(int field$, java.lang.Object value$) {
+    switch (field$) {
+      case 0:
+        station = (java.lang.CharSequence) value$;
+        break;
+      case 1:
+        time = (java.lang.Long) value$;
+        break;
+      case 2:
+        temp = (java.lang.Integer) value$;
+        break;
+      case 3:
+        price = (java.math.BigDecimal)value$; break;
+      default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+    }
+  }
 
   /**
    * Sets the value of the 'price' field.
    * @param value the value to set.
    */
   public void setPrice(java.math.BigDecimal value) {
-      this.price = value;
+    this.price = value;
   }
 
-    /**
-     * Serializes this Weather to a ByteBuffer.
-     *
-     * @return a buffer holding the serialized data for this instance
-     * @throws java.io.IOException if this instance could not be serialized
-     */
-    public java.nio.ByteBuffer toByteBuffer() throws java.io.IOException {
-        return ENCODER.encode(this);
-    }
+  @Override
+  public void writeExternal(java.io.ObjectOutput out)
+          throws java.io.IOException {
+    WRITER$.write(this, SpecificData.getEncoder(out));
+  }
 
-    public org.apache.avro.specific.SpecificData getSpecificData() {
-        return MODEL$;
-    }
+  @Override
+  public void readExternal(java.io.ObjectInput in)
+          throws java.io.IOException {
+    READER$.read(this, SpecificData.getDecoder(in));
+  }
 
-    public org.apache.avro.Schema getSchema() {
-        return SCHEMA$;
-    }
+  @Override
+  protected boolean hasCustomCoders() { return true; }
 
-    // Used by DatumWriter.  Applications should not call.
-    public java.lang.Object get(int field$) {
-        switch (field$) {
-            case 0:
-                return station;
-            case 1:
-                return time;
-            case 2:
-                return temp;
-            case 3:
-                return price;
-            default:
-                throw new org.apache.avro.AvroRuntimeException("Bad index");
-        }
-    }
-
-    // Used by DatumReader.  Applications should not call.
-    @SuppressWarnings(value = "unchecked")
-    public void put(int field$, java.lang.Object value$) {
-        switch (field$) {
-            case 0:
-                station = (java.lang.CharSequence) value$;
-                break;
-            case 1:
-                time = (java.lang.Long) value$;
-                break;
-            case 2:
-                temp = (java.lang.Integer) value$;
-                break;
-            case 3:
-                price = (java.math.BigDecimal) value$;
-                break;
-            default:
-                throw new org.apache.avro.AvroRuntimeException("Bad index");
-        }
-    }
-
-    @Override
-    public void writeExternal(java.io.ObjectOutput out)
+  @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException {
-        WRITER$.write(this, SpecificData.getEncoder(out));
-    }
-
-    @Override
-    public void readExternal(java.io.ObjectInput in)
-    throws java.io.IOException {
-        READER$.read(this, SpecificData.getDecoder(in));
-    }
-
-    @Override
-    protected boolean hasCustomCoders() {
-        return true;
-    }
-
-    @Override
-    public void customEncode(org.apache.avro.io.Encoder out)
-    throws java.io.IOException
-  {
     out.writeString(this.station);
 
     out.writeLong(this.time);
 
     out.writeInt(this.temp);
 
-      out.writeString(this.price.toString());
+    out.writeString(this.price.toString());
 
   }
 
-    @Override
-    public void customDecode(org.apache.avro.io.ResolvingDecoder in)
-    throws java.io.IOException
-  {
+  @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
+          throws java.io.IOException {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
-      if (fieldOrder == null) {
-          this.station = in.readString(this.station instanceof Utf8 ? (Utf8)this.station : null);
+    if (fieldOrder == null) {
+      this.station = in.readString(this.station instanceof Utf8 ? (Utf8)this.station : null);
 
       this.time = in.readLong();
 
@@ -306,25 +304,25 @@ public class Weather extends org.apache.avro.specific.SpecificRecordBase impleme
 
     } else {
       for (int i = 0; i < 4; i++) {
-          switch (fieldOrder[i].pos()) {
-              case 0:
-                  this.station = in.readString(this.station instanceof Utf8 ? (Utf8) this.station : null);
-                  break;
+        switch (fieldOrder[i].pos()) {
+          case 0:
+            this.station = in.readString(this.station instanceof Utf8 ? (Utf8) this.station : null);
+            break;
 
-              case 1:
-                  this.time = in.readLong();
-                  break;
+          case 1:
+            this.time = in.readLong();
+            break;
 
-              case 2:
-                  this.temp = in.readInt();
-                  break;
+          case 2:
+            this.temp = in.readInt();
+            break;
 
-              case 3:
-                  this.price = new java.math.BigDecimal(in.readString());
-                  break;
+          case 3:
+            this.price = new java.math.BigDecimal(in.readString());
+          break;
 
-              default:
-                  throw new java.io.IOException("Corrupt ResolvingDecoder.");
+        default:
+          throw new java.io.IOException("Corrupt ResolvingDecoder.");
         }
       }
     }
@@ -334,12 +332,12 @@ public class Weather extends org.apache.avro.specific.SpecificRecordBase impleme
    * RecordBuilder for Weather instances.
    */
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Weather>
-          implements org.apache.avro.data.RecordBuilder<Weather> {
+    implements org.apache.avro.data.RecordBuilder<Weather> {
 
     private java.lang.CharSequence station;
     private long time;
     private int temp;
-      private java.math.BigDecimal price;
+    private java.math.BigDecimal price;
 
     /** Creates a new Builder */
     private Builder() {
@@ -390,165 +388,168 @@ public class Weather extends org.apache.avro.specific.SpecificRecordBase impleme
       }
       if (isValidValue(fields()[3], other.price)) {
         this.price = data().deepCopy(fields()[3].schema(), other.price);
-          fieldSetFlags()[3] = true;
+        fieldSetFlags()[3] = true;
       }
     }
 
-      /**
-       * Gets the value of the 'station' field.
-      * @return The value.
-      */
+    /**
+      * Gets the value of the 'station' field.
+     * @return The value.
+     */
     public java.lang.CharSequence getStation() {
-        return station;
+      return station;
     }
 
 
-      /**
-       * Sets the value of the 'station' field.
-       *
-       * @param value The value of 'station'.
-       * @return This builder.
-       */
-      public eu.bausov.kafkaavro.avsc.Weather.Builder setStation(java.lang.CharSequence value) {
+    /**
+     * Sets the value of the 'station' field.
+     * @param value The value of 'station'.
+     * @return This builder.
+      */
+    public eu.bausov.kafkaavro.avsc.Weather.Builder setStation(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.station = value;
-          fieldSetFlags()[0] = true;
-          return this;
-      }
-
-      /**
-       * Checks whether the 'station' field has been set.
-       * @return True if the 'station' field has been set, false otherwise.
-      */
-      public boolean hasStation() {
-          return fieldSetFlags()[0];
-      }
-
-
-      /**
-       * Clears the value of the 'station' field.
-       * @return This builder.
-      */
-    public eu.bausov.kafkaavro.avsc.Weather.Builder clearStation() {
-      station = null;
-        fieldSetFlags()[0] = false;
-        return this;
+      fieldSetFlags()[0] = true;
+      return this;
     }
 
-      /**
-       * Gets the value of the 'time' field.
-      * @return The value.
-       */
-      public long getTime() {
-          return time;
-      }
+    /**
+     * Checks whether the 'station' field has been set.
+     * @return True if the 'station' field has been set, false otherwise.
+     */
+    public boolean hasStation() {
+      return fieldSetFlags()[0];
+    }
 
 
-      /**
-       * Sets the value of the 'time' field.
-       * @param value The value of 'time'.
-       * @return This builder.
-       */
+    /**
+      * Clears the value of the 'station' field.
+      * @return This builder.
+     */
+    public eu.bausov.kafkaavro.avsc.Weather.Builder clearStation() {
+      station = null;
+      fieldSetFlags()[0] = false;
+      return this;
+    }
+
+    /**
+     * Gets the value of the 'time' field.
+     *
+     * @return The value.
+     */
+    public long getTime() {
+      return time;
+    }
+
+
+    /**
+     * Sets the value of the 'time' field.
+      * @param value The value of 'time'.
+      * @return This builder.
+     */
     public eu.bausov.kafkaavro.avsc.Weather.Builder setTime(long value) {
       validate(fields()[1], value);
       this.time = value;
-        fieldSetFlags()[1] = true;
-        return this;
+      fieldSetFlags()[1] = true;
+      return this;
     }
 
-      /**
-       * Checks whether the 'time' field has been set.
-       * @return True if the 'time' field has been set, false otherwise.
-      */
-      public boolean hasTime() {
-          return fieldSetFlags()[1];
-      }
+    /**
+     * Checks whether the 'time' field has been set.
+     *
+     * @return True if the 'time' field has been set, false otherwise.
+     */
+    public boolean hasTime() {
+      return fieldSetFlags()[1];
+    }
 
 
-      /**
-       * Clears the value of the 'time' field.
-       * @return This builder.
-      */
+    /**
+     * Clears the value of the 'time' field.
+     * @return This builder.
+     */
     public eu.bausov.kafkaavro.avsc.Weather.Builder clearTime() {
-        fieldSetFlags()[1] = false;
-        return this;
+      fieldSetFlags()[1] = false;
+      return this;
     }
 
-      /**
-       * Gets the value of the 'temp' field.
-      * @return The value.
-       */
-      public int getTemp() {
-          return temp;
-      }
+    /**
+     * Gets the value of the 'temp' field.
+     *
+     * @return The value.
+     */
+    public int getTemp() {
+      return temp;
+    }
 
 
-      /**
-       * Sets the value of the 'temp' field.
-       * @param value The value of 'temp'.
-       * @return This builder.
-       */
+    /**
+      * Sets the value of the 'temp' field.
+      * @param value The value of 'temp'.
+     * @return This builder.
+     */
     public eu.bausov.kafkaavro.avsc.Weather.Builder setTemp(int value) {
       validate(fields()[2], value);
       this.temp = value;
-        fieldSetFlags()[2] = true;
-        return this;
+      fieldSetFlags()[2] = true;
+      return this;
     }
 
-      /**
-       * Checks whether the 'temp' field has been set.
-       * @return True if the 'temp' field has been set, false otherwise.
+    /**
+     * Checks whether the 'temp' field has been set.
+     * @return True if the 'temp' field has been set, false otherwise.
       */
-      public boolean hasTemp() {
-          return fieldSetFlags()[2];
-      }
+    public boolean hasTemp() {
+      return fieldSetFlags()[2];
+    }
 
 
-      /**
-       * Clears the value of the 'temp' field.
-       * @return This builder.
-      */
+    /**
+     * Clears the value of the 'temp' field.
+     * @return This builder.
+     */
     public eu.bausov.kafkaavro.avsc.Weather.Builder clearTemp() {
-        fieldSetFlags()[2] = false;
-        return this;
+      fieldSetFlags()[2] = false;
+      return this;
     }
 
-      /**
-       * Gets the value of the 'price' field.
-       * @return The value.
-      */
-      public java.math.BigDecimal getPrice() {
-          return price;
-      }
+    /**
+     * Gets the value of the 'price' field.
+     *
+     * @return The value.
+     */
+    public java.math.BigDecimal getPrice() {
+      return price;
+    }
 
 
-      /**
-       * Sets the value of the 'price' field.
-       *
-       * @param value The value of 'price'.
-       * @return This builder.
-       */
-      public eu.bausov.kafkaavro.avsc.Weather.Builder setPrice(java.math.BigDecimal value) {
+    /**
+     * Sets the value of the 'price' field.
+      * @param value The value of 'price'.
+     * @return This builder.
+     */
+    public eu.bausov.kafkaavro.avsc.Weather.Builder setPrice(java.math.BigDecimal value) {
       validate(fields()[3], value);
-          this.price = value;
-          fieldSetFlags()[3] = true;
-          return this;
-      }
+      this.price = value;
+      fieldSetFlags()[3] = true;
+      return this;
+    }
 
-      /**
-       * Checks whether the 'price' field has been set.
-       * @return True if the 'price' field has been set, false otherwise.
-       */
-      public boolean hasPrice() {
-          return fieldSetFlags()[3];
-      }
+    /**
+     * Checks whether the 'price' field has been set.
+     *
+     * @return True if the 'price' field has been set, false otherwise.
+     */
+    public boolean hasPrice() {
+      return fieldSetFlags()[3];
+    }
 
 
-      /**
-       * Clears the value of the 'price' field.
-       * @return This builder.
-       */
-      public eu.bausov.kafkaavro.avsc.Weather.Builder clearPrice() {
+    /**
+      * Clears the value of the 'price' field.
+      * @return This builder.
+      */
+    public eu.bausov.kafkaavro.avsc.Weather.Builder clearPrice() {
       price = null;
       fieldSetFlags()[3] = false;
       return this;
