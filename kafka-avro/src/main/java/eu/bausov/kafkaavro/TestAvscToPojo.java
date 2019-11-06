@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 /**
  * Created by GreenNun on 06.11.2019.
  */
-public class TestAvsc {
+public class TestAvscToPojo {
 
     public static void main(String[] args) {
         final var weather = new Weather();
