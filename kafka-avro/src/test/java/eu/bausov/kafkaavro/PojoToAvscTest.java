@@ -17,8 +17,8 @@ class PojoToAvscTest {
     @Test
     void test() {
         Schema s = ReflectData.get().getSchema(OrderImpl.class);
-        DatumWriter<OrderImpl> writer = new ReflectDatumWriter<OrderImpl>(OrderImpl.class);
-        DatumReader<OrderImpl> reader = new ReflectDatumReader<OrderImpl>(OrderImpl.class);
+        DatumWriter<OrderImpl> writer = new ReflectDatumWriter<>(OrderImpl.class);
+        DatumReader<OrderImpl> reader = new ReflectDatumReader<>(OrderImpl.class);
 
         System.out.println(s);
         System.out.println(writer);
