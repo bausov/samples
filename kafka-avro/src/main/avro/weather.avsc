@@ -1,5 +1,5 @@
 {
-  "namespace": "eu.bausov.kafkaavro.model",
+  "namespace": "eu.bausov.kafkaavro.avsc",
   "type": "record",
   "name": "Weather",
   "doc": "A weather reading.",

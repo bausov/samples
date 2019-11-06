@@ -1,6 +1,6 @@
 package eu.bausov.kafkaavro;
 
-import eu.bausov.kafkaavro.model.Weather;
+import eu.bausov.kafkaavro.avsc.Weather;
 
 import java.math.BigDecimal;
 

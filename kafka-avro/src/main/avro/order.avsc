@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "OrderImplFromAvsc",
+  "namespace": "eu.bausov.kafkaavro.avsc",
+  "fields": [
+    {
+      "name": "limit",
+      "type": {
+        "type": "string",
+        "java-class": "java.math.BigDecimal"
+      }
+    },
+    {
+      "name": "price",
+      "type": {
+        "type": "string",
+        "java-class": "java.math.BigDecimal"
+      }
+    }
+  ]
+}
