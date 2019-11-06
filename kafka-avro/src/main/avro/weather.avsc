@@ -16,6 +16,10 @@
     {
       "name": "temp",
       "type": "int"
+    },
+    {
+      "name" : "price",
+      "type" : {"type": "string", "java-class": "java.math.BigDecimal"}
     }
   ]
 }
