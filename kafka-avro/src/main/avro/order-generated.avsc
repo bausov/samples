@@ -2,6 +2,7 @@
   "type": "record",
   "name": "OrderImpl",
   "namespace": "eu.bausov.kafkaavro.model.generated",
+  "version": "1",
   "fields": [
     {
       "name": "limit",
