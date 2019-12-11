@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>temperature</artifactId>
+	<artifactId>sse-emitter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>temperature</name>
+	<name>sse-emitter</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

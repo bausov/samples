@@ -13,7 +13,9 @@
     </properties>
 
     <modules>
-
+        <module>kafka-avro</module>
+        <module>kafka-avro-producer</module>
+        <module>sse-emitter</module>
     </modules>
 
 </project>
