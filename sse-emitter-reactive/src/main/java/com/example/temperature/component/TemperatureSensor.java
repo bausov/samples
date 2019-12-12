@@ -19,6 +19,7 @@ public class TemperatureSensor {
     private final Observable<Temperature> dataStream = Observable
             .range(0, Integer.MAX_VALUE)
             .concatMap(tick -> Observable.just(tick)
+                    .doOnNext(System.out::println)
                     .delay(random.nextInt(5000), MILLISECONDS)
                     .map(tickValue -> this.probe()))
             .publish()
