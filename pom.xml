@@ -16,6 +16,7 @@
         <module>kafka-avro</module>
         <module>kafka-avro-producer</module>
         <module>sse-emitter</module>
+        <module>sse-emitter-reactive</module>
     </modules>
 
 </project>
