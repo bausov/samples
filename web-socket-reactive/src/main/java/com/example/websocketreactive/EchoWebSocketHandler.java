@@ -11,6 +11,7 @@ import reactor.core.publisher.Mono;
  */
 // todo test
 public class EchoWebSocketHandler implements WebSocketHandler {
+    @NotNull
     @Override
     public Mono<Void> handle(@NotNull WebSocketSession session) {
         return session

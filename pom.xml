@@ -18,6 +18,7 @@
         <module>sse-emitter</module>
         <module>sse-emitter-reactive</module>
         <module>sse-emitter-reactive-rxjava2</module>
+        <module>web-socket-reactive</module>
     </modules>
 
 </project>
