@@ -6,6 +6,7 @@
 
     <groupId>eu.bausov</groupId>
     <artifactId>samples</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -20,6 +21,7 @@
         <module>sse-emitter-reactive-rxjava2</module>
         <module>web-socket-reactive</module>
         <module>cloud-stream-kafka</module>
+        <module>refactoring-catalogue</module>
     </modules>
 
 </project>
