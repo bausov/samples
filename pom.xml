@@ -22,6 +22,7 @@
         <module>web-socket-reactive</module>
         <module>cloud-stream-kafka</module>
         <module>refactoring-catalogue</module>
+        <module>spring-integration</module>
     </modules>
 
 </project>
